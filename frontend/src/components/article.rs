@@ -1,7 +1,7 @@
 use {
     crate::{
         entities::interfaces::{IArticle, Status},
-        service::{articles::get_article, future::handle_future},
+        services::{articles::get_article, future::handle_future},
         utils::date::format_date,
     },
     yew::{html, Properties},
@@ -24,7 +24,7 @@ pub fn article(ArticleProps { id }: &ArticleProps) -> Html {
         move |_| {
             set_loading(true);
             let future = async move { get_article(&id).await };
-            handle_future(future, move |data: REsult<IArticle, Status>| {
+            handle_future(future, move |data: Result<IArticle, Status>| {
                 match data {
                     Ok(article) => set_article(article),
                     Err(_) => (),
@@ -37,8 +37,8 @@ pub fn article(ArticleProps { id }: &ArticleProps) -> Html {
     );
 
     html! {
-        (if *is_loading {
-            html* {}
+        {if *is_loading {
+            html! {}
         } else { 
             html! {
                 <div style="display: flex; flex-direction: column; flex: 1;">
@@ -56,6 +56,6 @@ pub fn article(ArticleProps { id }: &ArticleProps) -> Html {
                     </div>
                 </div>
             }
-        })
+        }}
     }
 }

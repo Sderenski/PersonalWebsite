@@ -2,7 +2,7 @@ use {
     crate::{
         entities::interfaces::{IArticle, Status},
         routes::AppRoute,
-        service::{acticles::get_article_list, future::handle_future},
+        services::{articles::get_article_list, future::handle_future},
     },
     yew::html,
     yew_functional::{function_component, use_effect_with_deps, use_state},
@@ -16,7 +16,7 @@ use {
 #[function_component(Articles)]
 pub fn articles() -> Html {
     // Setting states
-    let (s_loading, set_loading) = use_state(|| false);
+    let (is_loading, set_loading) = use_state(|| false);
     let (articles, set_articles) = use_state(move || vec![]);
 
     // Interacting with the states via effects
@@ -26,7 +26,7 @@ pub fn articles() -> Html {
             let future = async { get_article_list().await };
             handle_future(future, move |data: Result<Vec<IArticle>, Status>| {
                 match data {
-                    Ok(articles) => set_articles(acticles),
+                    Ok(articles) => set_articles(articles),
                     Err(_) => (),
                 };
                 set_loading(false);

@@ -1,6 +1,6 @@
 use {
     wasm_bindgen::{JsCast, JsValue},
-    wasm_bindgen_features::JsFuture,
+    wasm_bindgen_futures::JsFuture,
     web_sys::{Request, RequestInit, RequestMode, RequestRedirect, Response},
     yew::web_sys,
 };

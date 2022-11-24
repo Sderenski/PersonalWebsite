@@ -3,7 +3,7 @@
 
 use {
     crate::{
-        components::{article::Article, articles::Articles, page_not_found::PageNotFound},
+        components::{article::Article, articles::Articles, not_found::PageNotFound},
         routes::*,
     },
     yew::html,
@@ -11,7 +11,7 @@ use {
     yew_router::{components::RouterAnchor, prelude::Route, router::Router, switch::Permissive},
 };
 
-#[function_component(APP)]
+#[function_component(App)]
 pub fn app() -> Html {
     html! {
         <div style="display: flex; flex: 1; flex-direction: column; align-items: center; max-width: 1024px; margin: 0 auto;">
