@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <title>Yew App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&amp;display=swap" rel="stylesheet"> 
+
+        <link rel="stylesheet" href="/output-6313a5308df3e225.css">
+        <link rel="stylesheet" href="/site-270d0c2691a0deef.css">
+        
+
+        <script data-trunk="" src="./src/public/js/site.js" defer=""></script>
+    
+<link rel="preload" href="/testing-b7ed9d5d0bfec477_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/testing-b7ed9d5d0bfec477.js"></head>
+<body><script type="module">import init from '/testing-b7ed9d5d0bfec477.js';init('/testing-b7ed9d5d0bfec477_bg.wasm');</script><script>(function () {
+    var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    var url = protocol + '//' + window.location.host + '/_trunk/ws';
+    var poll_interval = 5000;
+    var reload_upon_connect = () => {
+        window.setTimeout(
+            () => {
+                // when we successfully reconnect, we'll force a
+                // reload (since we presumably lost connection to
+                // trunk due to it being killed, so it will have
+                // rebuilt on restart)
+                var ws = new WebSocket(url);
+                ws.onopen = () => window.location.reload();
+                ws.onclose = reload_upon_connect;
+            },
+            poll_interval);
+    };
+
+    var ws = new WebSocket(url);
+    ws.onmessage = (ev) => {
+        const msg = JSON.parse(ev.data);
+        if (msg.reload) {
+            window.location.reload();
+        }
+    };
+    ws.onclose = reload_upon_connect;
+})()
+</script></body></html>
