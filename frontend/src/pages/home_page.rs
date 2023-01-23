@@ -22,18 +22,20 @@ pub fn Home() -> Html {
 		<body class="background-color overscroll-contain">
 			<NavBar />
 			// Might change this to be more relative, Like over to the left and down more.
+			// TODO This will be changed to actually look a bit better along with moving it to the middle with a type of background behind it
+			// Also get an icon for the top right corner of the page, want to make this look a bit better then also use the card component to show projects with links to Github
 				<div class="relative h-screen">
-					<div class="absolute pl-20 pr-20 max-w-2xl md:bottom-80 md:left-48 bottom-40 left-16">
-					// In here I want something popping for a landing page for a software engineer... Maybe animated but I'll need to learn CSS to another level.
-						<div>
-							<h3 class="text-maroon">{"Hi, my name is"}</h3>
-							<h1 class="title text-subtext1">{"Stephen Derenski"}</h1>
-							<h2 class="title text-subtext1 break-after-page">{"I am a student"}</h2>
+					<div class="h-full w-full table absolute left-0">
+						<div class="table-cell align-middle">
+							<div class="pl-20 pr-20 mx-auto relative bottom-48">
+							// In here I want something popping for a landing page for a software engineer... Maybe animated but I'll need to learn CSS to another level.
+							// Add something to catch the eyes of the viewer, whether that is the background or an animation oh some kind, there has to be something
+								<div class="text-center">
+									<h1 class="title text-maroon text-9xl">{"Stephen Derenski"}</h1>
+									<h2 class="title text-subtext1 break-after-page text-5xl p-8">{"Student, Web Developer, Data Analyst"}</h2>
+								</div>
+							</div>
 						</div>
-						<br />
-						<p class="text-subtext1">{"Currently a sophmore at the University of Denver. Studying Computer Science with an emphasis in Software Engineering and Architecture."}</p>
-						<br />
-						{_portfilo}
 					</div>
 					<div class="absolute bottom-32 left-0 right-0 w-14 ml-auto mr-auto">
 						<a href="#">

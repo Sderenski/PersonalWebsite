@@ -9,11 +9,6 @@ pub fn about_me() -> Html {
 		<div>
 			<br/>
 			<div class="flex flex-row-reverse justify-evenly flex-wrap items-center align-items mx-auto p-4">
-				<div class="p-10 static">
-				// So possible be able to add the box via this then change the position offset with margins?
-					<div class="bg-subtext1 relative top-1.5 h-80 w-72 z-0"></div>	
-					<img class="proImg relative bottom-80 right-6 shadow-xl z-40" src="imgs/IMG-1579.JPG" />
-				</div>	
 				<div>
 					<h1 class="title text-maroon">{"About me"}</h1>
 					// Should increase the size of the text 
