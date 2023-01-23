@@ -27,12 +27,17 @@ pub fn Home() -> Html {
 				<div class="relative h-screen">
 					<div class="h-full w-full table absolute left-0">
 						<div class="table-cell align-middle">
-							<div class="pl-20 pr-20 mx-auto relative bottom-48">
-							// In here I want something popping for a landing page for a software engineer... Maybe animated but I'll need to learn CSS to another level.
-							// Add something to catch the eyes of the viewer, whether that is the background or an animation oh some kind, there has to be something
-								<div class="text-center">
-									<h1 class="title text-maroon text-9xl">{"Stephen Derenski"}</h1>
-									<h2 class="title text-subtext1 break-after-page text-5xl p-8">{"Student, Web Developer, Data Analyst"}</h2>
+							<div class="relative">
+								<div class="relative z-0 bottom-32">
+									<img class="blur-sm opacity-25 h-[90rem] max-w-full ml-48" src="../../imgs/code.png" alt="" />
+								</div>	
+								<div class="pl-20 pr-20 mx-auto absolute bottom-2/4 left-1/4 right-1/4">
+								// In here I want something popping for a landing page for a software engineer... Maybe animated but I'll need to learn CSS to another level.
+								// Add something to catch the eyes of the viewer, whether that is the background or an animation oh some kind, there has to be something
+									<div class="text-center">
+										<h1 class="title text-maroon text-9xl">{"Stephen Derenski"}</h1>
+										<h2 class="title text-subtext1 break-after-page text-5xl p-8">{"Student, Web Developer, Data Analyst"}</h2>
+									</div>
 								</div>
 							</div>
 						</div>
