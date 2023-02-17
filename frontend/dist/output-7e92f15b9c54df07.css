@@ -592,8 +592,8 @@ h3 {
   left: 0px;
 }
 
-.bottom-8 {
-  bottom: 2rem;
+.bottom-32 {
+  bottom: 8rem;
 }
 
 .bottom-2\/4 {
@@ -608,28 +608,8 @@ h3 {
   right: 25%;
 }
 
-.bottom-32 {
-  bottom: 8rem;
-}
-
 .right-0 {
   right: 0px;
-}
-
-.left-1\/12 {
-  left: 8.333333%;
-}
-
-.left-1\/6 {
-  left: 16.666667%;
-}
-
-.right-1\/6 {
-  right: 16.666667%;
-}
-
-.bottom-20 {
-  bottom: 5rem;
 }
 
 .z-50 {
@@ -657,28 +637,16 @@ h3 {
   margin-left: 0.75rem;
 }
 
+.ml-48 {
+  margin-left: 12rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
 
 .mr-auto {
   margin-right: auto;
-}
-
-.mb-96 {
-  margin-bottom: 24rem;
-}
-
-.-mt-96 {
-  margin-top: -24rem;
-}
-
-.ml-52 {
-  margin-left: 13rem;
-}
-
-.ml-48 {
-  margin-left: 12rem;
 }
 
 .flex {
@@ -717,20 +685,8 @@ h3 {
   height: 100%;
 }
 
-.h-auto {
-  height: auto;
-}
-
-.h-3\/2 {
-  height: 150%;
-}
-
 .h-\[90rem\] {
   height: 90rem;
-}
-
-.h-\[110rem\] {
-  height: 110rem;
 }
 
 .w-5 {
@@ -755,10 +711,6 @@ h3 {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-7xl {
-  max-width: 80rem;
 }
 
 @keyframes bounce {
@@ -786,10 +738,6 @@ h3 {
        break-after: page;
 }
 
-.flex-row-reverse {
-  flex-direction: row-reverse;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -804,10 +752,6 @@ h3 {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
 }
 
 .overscroll-contain {
@@ -874,6 +818,10 @@ h3 {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
 .pl-20 {
@@ -957,10 +905,6 @@ h3 {
 
 .underline {
   text-decoration-line: underline;
-}
-
-.opacity-50 {
-  opacity: 0.5;
 }
 
 .opacity-25 {
