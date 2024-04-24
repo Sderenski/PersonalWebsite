@@ -1,0 +1,17 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "First implementation of my own Personal Website",
+  "main": "index.js",
+  "scripts": {
+      "dev:server": "npm run --prefix server dev",
+      "dev:client": "npm run --prefix client serve",
+      "dev": "concurrently 'npm:dev:server' 'npm:dev:client'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
