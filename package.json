@@ -6,7 +6,9 @@
   "scripts": {
       "dev:server": "npm run --prefix server dev",
       "dev:client": "npm run --prefix client serve",
-      "dev": "concurrently 'npm:dev:server' 'npm:dev:client'"
+      "dev": "concurrently 'npm:dev:server' 'npm:dev:client'",
+      "build": "npm run --prefix client build",
+      "deploy": "npm:dev:server"
   },
   "keywords": [],
   "author": "",
